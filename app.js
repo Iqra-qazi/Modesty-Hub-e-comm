@@ -131,31 +131,31 @@ var allabaya = {
         coordabaya1: {
             name: "Two-Piece Modest Co-Ord",
             price: "6800",
-            img: "https://blackcamels.com.pk/cdn/shop/files/CoOrd_1.jpg?v=1757414200",
+            img: "https://blackcamels.com.pk/cdn/shop/files/2_c87a3c3a-bcee-43c3-8765-1294bc6da791.jpg?v=1775480273",
             description: "Matching top and skirt set for modest style.",
         },
         coordabaya2: {
             name: "Layered Co-Ord Set",
             price: "7200",
-            img: "https://blackcamels.com.pk/cdn/shop/files/CoOrd_2.jpg?v=1757414201",
+            img: "https://blackcamels.com.pk/cdn/shop/files/1_6b9f64fe-6c11-4651-a993-6f282fe447a9.jpg?v=1770026975",
             description: "Layered co-ord for chic and modest wear.",
         },
         coordabaya3: {
             name: "Summer Co-Ord",
             price: "6500",
-            img: "https://blackcamels.com.pk/cdn/shop/files/CoOrd_3.jpg?v=1757414202",
+            img: "https://blackcamels.com.pk/cdn/shop/files/1_e369df05-c8fc-432d-b2c8-68083a58d25b.jpg?v=1764668216",
             description: "Lightweight co-ord set for casual summer days.",
         },
         coordabaya4: {
             name: "Elegant Evening Co-Ord",
             price: "9500",
-            img: "https://blackcamels.com.pk/cdn/shop/files/CoOrd_4.jpg?v=1757414203",
+            img: "https://blackcamels.com.pk/cdn/shop/files/1_d0751abe-1a3f-4c0a-9399-dfcc22e09162.jpg?v=1770032876",
             description: "Perfect for modest evening events and dinners.",
         },
         coordabaya5: {
             name: "Prayer Co-Ord Set",
             price: "5800",
-            img: "https://blackcamels.com.pk/cdn/shop/files/CoOrd_5.jpg?v=1757414204",
+            img: "https://blackcamels.com.pk/cdn/shop/files/3_dbd95720-9c4a-4f87-9d3e-4b38ab47f850.jpg?v=1757413393",
             description: "Comfortable co-ord set suitable for prayers and home.",
         },
     },
@@ -163,31 +163,31 @@ var allabaya = {
         occasionabaya1: {
             name: "Party Black Abaya",
             price: "12000",
-            img: "https://blackcamels.com.pk/cdn/shop/files/Occasion_1.jpg?v=1757414300",
+            img: "https://blackcamels.com.pk/cdn/shop/files/2_d1e1afd4-fadf-467c-b3c0-344a6c5fe6e8.jpg?v=1775723842",
             description: "Elegant black abaya with sparkling embellishments for events.",
         },
         occasionabaya2: {
             name: "Gold Detail Abaya",
             price: "12500",
-            img: "https://blackcamels.com.pk/cdn/shop/files/Occasion_2.jpg?v=1757414301",
+            img: "https://blackcamels.com.pk/cdn/shop/files/1_40845d92-7ab3-451b-9c78-ce329b1b7fe3.jpg?v=1770115647",
             description: "Luxurious gold threadwork on premium fabric for special occasions.",
         },
         occasionabaya3: {
             name: "Embellished Navy Abaya",
             price: "11000",
-            img: "https://blackcamels.com.pk/cdn/shop/files/Occasion_3.jpg?v=1757414302",
+            img: "https://blackcamels.com.pk/cdn/shop/products/Nahr-2.jpg?v=1757413711",
             description: "Navy blue abaya with subtle shimmer for evening events.",
         },
         occasionabaya4: {
             name: "Velvet Evening Abaya",
             price: "13500",
-            img: "https://blackcamels.com.pk/cdn/shop/files/Occasion_4.jpg?v=1757414303",
+            img: "https://blackcamels.com.pk/cdn/shop/files/2_61e6c733-d416-4bbd-893b-ce6abd053f2d.jpg?v=1770115647",
             description: "Soft velvet fabric abaya with graceful flow for formal events.",
         },
         occasionabaya5: {
             name: "Embroidered Party Abaya",
             price: "14000",
-            img: "https://blackcamels.com.pk/cdn/shop/files/Occasion_5.jpg?v=1757414304",
+            img: "https://blackcamels.com.pk/cdn/shop/files/Afra-1.webp?v=1764076613",
             description: "Front open abaya with rich embroidery for parties and weddings.",
         },
     },
@@ -424,34 +424,6 @@ var reviews = [
 ];
 
 
-(async () => {
-  await loadFireflyPreset(tsParticles);
-
-  await tsParticles.load({
-    id: "tsparticles",
-    options: {
-      preset: "firefly",
-      background: {
-        color: "#C4C6C8",
-      },
-    },
-  });
-})();
-
-tsParticles.load({
-  id: "tsparticles",
-  options: {
-    particles: {
-      shape: {
-        type: "square", // starting from v2, this require the square shape script
-      },
-    },
-    background: {
-      color: "#C4C6C8",
-    },
-    preset: "firefly",
-  },
-});
 
 function clickselect(category) {
     var container = document.getElementById("productContainer");
