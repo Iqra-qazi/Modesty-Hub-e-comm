@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modesty Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">Modesty Hub</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-wrap">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('newin')">NEW IN</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('abaya')">ABAYAS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('everyday')">EVERYDAY ESSENTIALS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('umrahandprayer')">UMRAH & PRAYER</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('coords')">MODEST CO-ORDS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('occasion')">OCCASION WEAR</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('kidsabaya')">KIDS ABAYAS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="clickselect('hijab')">HIJABS & ACCESSORIES</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://blackcamels.com.pk/cdn/shop/files/SHop_Umrah_Web_.jpg_1.jpg?v=1774903920&width=1880"
+        class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://blackcamels.com.pk/cdn/shop/files/Your_Complete_Web__jpg.jpg?v=1774875872&width=1880"
+        class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://blackcamels.com.pk/cdn/shop/files/Every_Dawat_Web__jpg.jpg?v=1775471748&width=1880"
+        class="d-block w-100">
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div id="productContainer" class="row"></div>
+</div>
+
+<div class="container mt-5">
+
+  <h2 class="text-center">EMBRACING MODESTY, HONORING STRENGTH</h2>
+
+  <div id="allcards" class="row row-cols-1 row-cols-md-3 g-4 mt-3"></div>
+
+</div>
+
+
+<div class="container mt-4">
+ 
+</div>
+ <div id="imageGallery" class="row g-3"></div>
+
+<div class="container mt-5">
+
+  <h2 class="text-center">Kid Abaya</h2>
+
+  <div id="topCards" class="row"></div>
+  <div id="moreCards" class="row"></div>
+
+</div>
+<div id="hijabcollection" class="row g-5 mt-2"></div>
+<div class="container mt-5">
+
+  <h2 class="text-center">Hijabs</h2>
+
+  
+
+  <div id="tophijabs" class="row"></div>
+  <div id="morehijabs" class="row"></div>
+
+</div>
+
+
+<div class="container mt-5">
+
+  <h2 class="text-center">Let Customers Speak</h2>
+
+  <div id="reviews" class="row g-3"></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <!-- Upper Footer: Newsletter -->
+        <div class="upperFooter">
+            <h3>DISCOVER BLACK CAMELS</h3>
+            <p>Black Camels - Discover premium abaya designs that blend tradition and modern elegance. Crafted for the
+                sophisticated woman, redefining style with every abaya.</p>
+            <div class="newsletter">
+                <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS">
+                <button>Submit</button>
+            </div>
+        </div>
+
+        <!-- Lower Footer -->
+        <div class="lowerFooter">
+            <!-- Get in Touch -->
+            <div class="box">
+                <ul>
+                    <li class="footerHead">GET IN TOUCH</li>
+                    <li>We are available From Monday to Saturday</li>
+                    <li>Timings: 10am - 6pm</li>
+                    <li>+92 345 2811152</li>
+                    <li>info@blackcamels.com.pk</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                    <li>TikTok</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+
+            <!-- Customer Support -->
+            <div class="box">
+                <ul>
+                    <li class="footerHead">INFORMATION</li>
+                    <li>Order Placement & Confirmation</li>
+                    <li>Cancellation</li>
+                    <li>Shipping & Delivery Policy</li>
+                    <li>Return & Exchange Policy</li>
+                    <li>Terms and Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+
+            <!-- Discover -->
+            <div class="box">
+                <ul>
+                    <li class="footerHead">DISCOVER BLACK CAMELS</li>
+                    <li>Our Story</li>
+                    <li>Blog</li>
+                    <li>FAQs</li>
+                    <li>Newsletter Sign Up</li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="box">
+                <ul>
+                    <li class="footerHead">ABAYA CATEGORIES</li>
+                    <li>Umrah Abayas</li>
+                    <li>Prayer Wear</li>
+                    <li>Occasion Wear</li>
+                    <li>Modest Co-ords</li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="box box5">
+                <h3>FOLLOW US</h3>
+                <div class="circleContainer">
+                    <div class="circle"><i class="fa-brands fa-x-twitter"></i></div>
+                    <div class="circle"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="circle"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="circle"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="circle"><i class="fa-brands fa-pinterest"></i></div>
+                    <div class="circle"><i class="fa-brands fa-tiktok"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div>© 2026 Black Camels Abaya Store. All rights reserved.</div>
+        </div>
+    </footer>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-snow@3/tsparticles.preset.snow.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
