@@ -1,3 +1,9 @@
+function clickhome(){
+    window.location.href="index.html"
+}
+function clickabout(){
+    window.location.href="about.html"
+}
 var allabaya = {
     newin: {
         newinabaya1: {
@@ -256,154 +262,37 @@ var allabaya = {
         },
     }
 }
-
 var allcards = document.getElementById("allcards");
-var count = 0;
-for (var category in allabaya) { 
-    for (var itemKey in allabaya[category]) { 
-        var item = allabaya[category][itemKey];
-
-        allcards.innerHTML += `
-        <div class="col">
-            <div class="card h-100">
-                <img src="${item.img}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">${item.name}</h5>
-                    <p class="card-text">${item.description}</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">${item.price}</small>
-                </div>
-            </div>
-        </div>`;
-            count++;
-    }
-        if (count >= 3) break;
-    
-
-    if (count >= 4) break;
-}
-
-
-
-
-
-
-var count = 0;
 
 for (var category in allabaya) {
-    for (var itemKey in allabaya[category]) {
 
-        if (count >= 4) break;
+  for (var item in allabaya[category]) {
 
-        var item = allabaya[category][itemKey];
+    var data = allabaya[category][item];
 
-        allcards.innerHTML += `
-        <div class="col">
-            <div class="card h-100">
-                <img src="${item.img}" class="card-img-top">
-                <div class="card-body">
-                    <h5>${item.name}</h5>
-                    <p>${item.description}</p>
-                </div>
-                <div class="card-footer">
-                    <small>Rs ${item.price}</small>
-                </div>
-            </div>
-        </div>`;
+    var card = document.createElement("div");
+    card.classList.add("col");
 
-        count++;
-    }
-    if (count >= 4) break;
-}
-var gallery = document.getElementById("imageGallery");
-
-var galleryimg = [
-  "https://blackcamels.com.pk/cdn/shop/files/web_banner_1_df19c59d-4d50-44cc-be5a-a09fe3093caf.jpg"
-];
-
-galleryimg.forEach(function (src) {
-  gallery.innerHTML += `
-    <div class="col-12">
-      <img src="${src}" class="img-fluid rounded">
-    </div>
-  `;
-});
-var topCards = document.getElementById("topCards");
-var moreCards = document.getElementById("moreCards");
-
-var count = 0;
-
-for (var key in allabaya.kidsabaya) {
-
-    var data = allabaya.kidsabaya[key];
-
-    var card = `
-    <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="${data.img}" class="card-img-top">
-            <div class="card-body">
-                <h5>${data.name}</h5>
-                <p>${data.description}</p>
-            </div>
-            <div class="card-footer">
-                <small>Rs ${data.price}</small>
-            </div>
+    card.innerHTML = `
+      <div class="card h-100 shadow-sm">
+        <img src="${data.img}" class="card-img-top" alt="${data.name}">
+        
+        <div class="card-body">
+          <h5 class="card-title">${data.name}</h5>
+          <p class="card-text">${data.description}</p>
+          <h6 class="text-primary">Rs: ${data.price}</h6>
         </div>
-    </div>`;
 
-    if (count < 4) {
-        topCards.innerHTML += card;
-    } else {
-        moreCards.innerHTML += card;
-    }
-
-    count++;
-}
-var tophijabs = document.getElementById("tophijabs");
-var morehijabs = document.getElementById("morehijabs");
-
-var count = 0;
-
-for (var key in allabaya.hijab) {
-
-    var data = allabaya.hijab[key];
-
-    var card = `
-    <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="${data.img}" class="card-img-top">
-            <div class="card-body">
-                <h5>${data.name}</h5>
-                <p>${data.description}</p>
-            </div>
-            <div class="card-footer">
-                <small>Rs ${data.price}</small>
-            </div>
+        <div class="card-footer text-center">
+        <button class="btn btn-sm" onclick="addToCart(data)">Add to Cart</button>
         </div>
-    </div>`;
+      </div>
+    `;
 
-    if (count < 4) {
-        tophijabs.innerHTML += card;
-    } else {
-        morehijabs.innerHTML += card;
-    }
-
-    count++;
+    allcards.appendChild(card);
+  }
 }
-var hijabimg = document.getElementById("hijabcollection");
 
-var hijabimg2 = [
-  "https://blackcamels.com.pk/cdn/shop/files/Discover_Hijabs_Website.jpg?v=1765458578&width=2000"
-];
-
-hijabimg2.forEach(function (src) {
-  hijabimg.innerHTML += `
-    <div class="col-12">
-      <img src="${src}" class="img-fluid rounded" alt="Hijab Collection">
-    </div>
-  `;
-});
 
 var reviews = [
   {
@@ -455,3 +344,50 @@ function clickselect(category) {
         `;
     }
 }
+
+
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("active");
+}
+
+function showMenu(category) {
+
+  console.log(category);
+
+  allcards.innerHTML = "";
+
+  var products = allabaya[category];
+
+  if (!products) {
+    console.error("Category not found:", category);
+    return;
+  }
+
+  for (var key in products) {
+
+    var product = products[key];
+
+    if (product && product.name) {
+      allcards.innerHTML += `
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="${product.img}" class="card-img-top">
+            <div class="card-body">
+              <h5>${product.name}</h5>
+              <p>${product.description}</p>
+              <h6>Rs: ${product.price}</h6>
+            </div>
+            
+        <div class="card-footer text-center">
+          <button class="btn  btn-sm">Add to Cart</button>
+        </div>
+          </div>
+        </div>
+      `;
+    }
+
+  }
+
+  document.getElementById("sidebar").classList.remove("active");
+}
+

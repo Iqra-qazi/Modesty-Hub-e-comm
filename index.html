@@ -12,129 +12,99 @@
 </head>
 
 <body>
-  
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
-  <div class="container-fluid">
 
-    <a class="navbar-brand" href="#">Modesty Hub</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <!-- TOGGLE BUTTON -->
+            <button class="btn menu-btn" onclick="toggleSidebar()">☰</button>
+            <div id="sidebar" class="sidebar">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h3>Categories</h3>
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-wrap">
+                <ul>
+                    <li onclick="showMenu('abaya')">Abaya</li>
+                    <li onclick="showMenu('newin')">NewIn</li>
+                    <li onclick="showMenu('everyday')">Everyday</li>
+                    <li onclick="showMenu('kidsabaya')">Kidsabaya</li>
+                    <li onclick="showMenu('hijab')">Hijab</li>
+                    <li onclick="showMenu('occasion')">Occasion Abaya</li>
+                    <li onclick="showMenu('coords')">Coords Set</li>
+                    <li onclick="showMenu('umrahandprayer')">Umrah and Prayer</li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('newin')">NEW IN</a>
-        </li>
+                </ul>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('abaya')">ABAYAS</a>
-        </li>
+            </div>
+            <a class="navbar-brand ms-2" href="#">🛍️ Modesty Hub</a>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('everyday')">EVERYDAY ESSENTIALS</a>
-        </li>
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('umrahandprayer')">UMRAH & PRAYER</a>
-        </li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="clickhome()">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="clickabout()">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('coords')">MODEST CO-ORDS</a>
-        </li>
+                </ul>
+            </div>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('occasion')">OCCASION WEAR</a>
-        </li>
+        </div>
+    </nav>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('kidsabaya')">KIDS ABAYAS</a>
-        </li>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="clickselect('hijab')">HIJABS & ACCESSORIES</a>
-        </li>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://blackcamels.com.pk/cdn/shop/files/SHop_Umrah_Web_.jpg_1.jpg?v=1774903920&width=1880"
+                    class="d-block w-100">
+            </div>
 
-      </ul>
+            <div class="carousel-item">
+                <img src="https://blackcamels.com.pk/cdn/shop/files/Your_Complete_Web__jpg.jpg?v=1774875872&width=1880"
+                    class="d-block w-100">
+            </div>
 
-    </div>
-  </div>
-</nav>
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://blackcamels.com.pk/cdn/shop/files/SHop_Umrah_Web_.jpg_1.jpg?v=1774903920&width=1880"
-        class="d-block w-100">
+            <div class="carousel-item">
+                <img src="https://blackcamels.com.pk/cdn/shop/files/Every_Dawat_Web__jpg.jpg?v=1775471748&width=1880"
+                    class="d-block w-100">
+            </div>
+        </div>
     </div>
 
-    <div class="carousel-item">
-      <img src="https://blackcamels.com.pk/cdn/shop/files/Your_Complete_Web__jpg.jpg?v=1774875872&width=1880"
-        class="d-block w-100">
+
+    <div class="container mt-4">
+        <div id="productContainer" class="row"></div>
     </div>
 
-    <div class="carousel-item">
-      <img src="https://blackcamels.com.pk/cdn/shop/files/Every_Dawat_Web__jpg.jpg?v=1775471748&width=1880"
-        class="d-block w-100">
+    <div class="container mt-5">
+
+        <h2 class="text-center">EMBRACING MODESTY, HONORING STRENGTH</h2>
+
+        <div id="allcards" class="row row-cols-1 row-cols-md-3 g-4 mt-3"></div>
+
     </div>
-  </div>
+
+<div class="container">
+  <div class="row" id="allcards"></div>
 </div>
 
+<!-- DETAIL PAGE (hidden by default) -->
+<div id="detailPage" style="display:none;"></div>
+    <div class="container mt-4">
 
-<div class="container mt-4">
-  <div id="productContainer" class="row"></div>
-</div>
-
-<div class="container mt-5">
-
-  <h2 class="text-center">EMBRACING MODESTY, HONORING STRENGTH</h2>
-
-  <div id="allcards" class="row row-cols-1 row-cols-md-3 g-4 mt-3"></div>
-
-</div>
+    </div>
 
 
-<div class="container mt-4">
- 
-</div>
- <div id="imageGallery" class="row g-3"></div>
+    <div class="container mt-5">
 
-<div class="container mt-5">
+        <h2 class="text-center">Let Customers Speak</h2>
 
-  <h2 class="text-center">Kid Abaya</h2>
+        <div id="reviews" class="row g-3"></div>
 
-  <div id="topCards" class="row"></div>
-  <div id="moreCards" class="row"></div>
-
-</div>
-<div id="hijabcollection" class="row g-5 mt-2"></div>
-<div class="container mt-5">
-
-  <h2 class="text-center">Hijabs</h2>
-
-  
-
-  <div id="tophijabs" class="row"></div>
-  <div id="morehijabs" class="row"></div>
-
-</div>
-
-
-<div class="container mt-5">
-
-  <h2 class="text-center">Let Customers Speak</h2>
-
-  <div id="reviews" class="row g-3"></div>
-
-</div>
+    </div>
 
 
 
@@ -148,7 +118,7 @@
 
 
     <footer>
-        
+
         <div class="upperFooter">
             <h3>DISCOVER BLACK CAMELS</h3>
             <p>Black Camels - Discover premium abaya designs that blend tradition and modern elegance. Crafted for the
@@ -159,9 +129,9 @@
             </div>
         </div>
 
-       
+
         <div class="lowerFooter">
-          
+
             <div class="box">
                 <ul>
                     <li class="footerHead">GET IN TOUCH</li>
@@ -177,7 +147,7 @@
                 </ul>
             </div>
 
-          
+
             <div class="box">
                 <ul>
                     <li class="footerHead">INFORMATION</li>
@@ -190,7 +160,7 @@
                 </ul>
             </div>
 
-         
+
             <div class="box">
                 <ul>
                     <li class="footerHead">DISCOVER BLACK CAMELS</li>
@@ -201,7 +171,7 @@
                 </ul>
             </div>
 
-          
+
             <div class="box">
                 <ul>
                     <li class="footerHead">ABAYA CATEGORIES</li>
@@ -225,13 +195,13 @@
             </div>
         </div>
 
-    
+
         <div class="copyright">
             <div>© 2026 Black Camels Abaya Store. All rights reserved.</div>
         </div>
     </footer>
-    
-      
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
